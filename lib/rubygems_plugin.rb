@@ -11,6 +11,7 @@ Gem.post_uninstall(&hook)
 
 at_exit do
   if do_rehash
+    puts 'Running `rbenv rehash`'
     system 'rbenv', 'rehash'
   end
 end
